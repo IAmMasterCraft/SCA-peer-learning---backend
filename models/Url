@@ -1,0 +1,21 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+//create Url Schema
+const Url = new Schema({
+    long_url: {
+        type: String,
+        required: true,
+    },
+    short_route: {
+        type: String,
+        required: true,
+        index: { unique: true },
+    },
+    dateGenerated: {
+        type: Date,
+        default: Date.now()
+    },
+});
+
+module.exports = mongoose.model("Url", Url);
