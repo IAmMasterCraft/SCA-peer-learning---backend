@@ -27,7 +27,7 @@ const pageSetup = (shortUrl = false) => {
                 <input type="url" id="url" class="form-control" placeholder="url" required="required">
             </div>
             <div class="form-group">
-                <button id="shorten-url" class="btn btn-primary btn-block" onclick="shortenUrl()">Shorten Url</button>
+                <button id="shorten-url" class="btn btn-primary btn-block">Shorten Url</button>
             </div>
             <p id="response" class="text-center">${(shortUrl) ? "Your short url is:"+shortUrl : ""}</p>
     </div>
@@ -62,6 +62,8 @@ const pageSetup = (shortUrl = false) => {
                 }
             });
         }
+
+        shortenUrl();
     </script>
     </body>
     </html>`;
